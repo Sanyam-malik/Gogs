@@ -1,0 +1,34 @@
+name: Sync Gogs Repository
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-gh-pages:
+    name: Sync Gogs Repository
+    runs-on: ownubuntu
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push clean history to target repo
+        run: |
+          # Remove old git history
+          rm -rf .git
+      
+          # Re-init repo
+          git init
+          git config user.name "Sanyam-malik"
+          git config user.email "sanyammalik105@gmail.com"
+      
+          # Add all files and commit
+          git add .
+          git commit -m "Clean sync"
+      
+          # Push to target
+          git branch -M main
+          git remote add target https://x-access-token:${{ vars.GIT_TOKEN }}@github.com/Sanyam-malik/Gogs.git
+          git push target main --force
