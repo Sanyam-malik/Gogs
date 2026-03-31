@@ -1,0 +1,1163 @@
+:root {
+  --mainBgColor: #ffffff;
+  --secondBgColor: #f5f5f5;
+  --mainTextColor: #222;
+  --secondTextColor: #222;
+  --accentBase: #f4775b;
+  --accentBase-dark: rgba(35,115,51,0.15);
+  --btnShadow: #dcdcdc;
+  --userCardShadow: #e6e6e6;
+  --RepoFilesBg: #ffeeea;
+  --codeBg: #f8f8f8;
+  --codeColor: #2f4f4f;
+  --codeSelected: #dbeafe;
+  --codeColorSelected: #065f46;
+  --codeDifOld: #ffecec;
+  --comment: rgba(120,120,120,0.7);
+  --selector: #005cc5;
+  --doctag: #22863a;
+  --attribute: #6f42c1;
+  --hljsTitle: #b58900;
+  --meta: #6a737d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mainBgColor: #292929;
+    --secondBgColor: #1c1c1c;
+    --mainTextColor: silver;
+    --secondTextColor: silver;
+    --accentBase: #c44326;
+    --accentBase-dark: #4682b485;
+    --btnShadow: #2b2b2b;
+    --userCardShadow: #1c1c1c;
+    --RepoFilesBg: #252525;
+    --codeBg: #111;
+    --codeColor: #9ebdb1;
+    --codeSelected: #001;
+    --codeColorSelected: #8f1;
+    --codeDifOld: #6f3a3a;
+    --comment: #a2a2a26e;
+    --selector: #0086b3;
+    --doctag: #90a959;
+    --attribute: #1c7100;
+    --hljsTitle: #d5bd5b;
+    --meta: #444444;
+  }
+}
+body:not(.full-width) {
+  background-color: var(--mainBgColor);
+  background-size: contain;
+  background-attachment: fixed;
+  color: var(--secondTextColor);
+}
+
+.following.bar.light {
+  background-color: var(--secondBgColor) !important;
+  border-bottom: 1px solid var(--mainBgColor);
+  color: var(--secondTextColor) !important;
+  position: fixed;
+  top: 0;
+}
+
+.ui .text.black {
+  color: var(--mainTextColor);
+}
+
+.ui.menu .dropdown.item .menu {
+  background: var(--secondBgColor);
+}
+
+@media (max-width: 1199px) {
+  .ui.container:not(.fluid) {
+    width: 85% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .ui.container:not(.fluid) {
+    width: 75% !important;
+  }
+}
+.tabular .item {
+  /* Repo tabs menu */
+  color: var(--accentBase) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.ui.header,
+.ui.menu,
+.ui.input input,
+.ui.button:not(.label) {
+  color: var(--accentBase);
+}
+
+.ui.info.segment.top {
+  background-color: var(--secondBgColor) !important;
+}
+
+#file-content h1,
+#file-content h2,
+#file-content h3,
+#file-content h4,
+#file-content h5 {
+  color: var(--mainTextColor);
+}
+
+pre.raw,
+code.raw {
+  background-color: var(--secondBgColor);
+  border: 1px solid var(--mainBgColor);
+}
+
+.following.bar {
+  color: var(--accentBase) !important;
+}
+
+.overflow.menu .items .item {
+  color: var(--mainTextColor);
+}
+
+.following.bar .top.menu a.item.brand {
+  color: var(--accentBase) !important;
+}
+
+.following.bar .top.menu a.item:hover,
+.following.bar .top.menu .dropdown.item:hover,
+.following.bar .top.menu .dropdown.item.active {
+  color: var(--accentBase) !important;
+}
+
+.following.bar .top.menu a.item:hover {
+  color: var(--accentBase) !important;
+}
+
+.following.bar .top.menu .menu {
+  color: var(--accentBase) !important;
+}
+
+.following.bar .head.link.item {
+  color: var(--accentBase) !important;
+}
+
+.home {
+  padding-top: 80px;
+}
+
+.ui.left {
+  padding-left: 5px;
+}
+
+.ui.right {
+  padding-right: 5px;
+}
+
+.ui .header > i + .content {
+  background-color: var(--mainBgColor) !important;
+}
+
+footer {
+  color: var(--mainTextColor) !important;
+  background-color: var(--secondBgColor);
+}
+
+.markdown:not(code) {
+  background-color: var(--secondBgColor);
+  color: var(--mainTextColor);
+}
+
+.markdown:not(code) blockquote {
+  border-left: 4px solid var(--secondBgColor);
+}
+
+.markdown:not(code) table th,
+.markdown:not(code) table td {
+  border: 0px solid var(--accentBase) !important;
+  background-color: var(--codeBg);
+  color: var(--accentBase);
+}
+
+.markdown:not(code) span.frame > span {
+  border: 1px solid var(--mainBgColor);
+}
+
+.markdown:not(code) pre code,
+.markdown:not(code) pre tt {
+  color: var(--mainTextColor);
+}
+
+.markdown:not(code) .highlight pre,
+.markdown:not(code) pre {
+  background-color: var(--secondBgColor);
+}
+
+.home .stackable {
+  padding-top: 40px;
+}
+
+.ui.attached.header {
+  background: var(--secondBgColor) !important;
+  color: var(--accentBase) !important;
+  border: none !important;
+}
+
+.repository .header-wrapper {
+  color: var(--accentBase) !important;
+  background-color: transparent;
+}
+
+.repository {
+  padding-top: 80px !important;
+}
+
+.repository #clone-panel {
+  width: 30vw !important;
+}
+
+.repository #clone-panel input {
+  max-width: 100%;
+  background-color: var(--secondBgColor);
+}
+
+.repository.file.list #git-stats {
+  background-color: var(--secondBgColor);
+}
+
+.repository.file.list #file-content .view-raw {
+  border: 0 !important;
+}
+
+.repository.file.list #file-content .code-view * {
+  font-size: 14px;
+  line-height: 20px !important;
+}
+
+.repository.file.list #file-content .code-view .lines-num span {
+  line-height: 20px !important;
+}
+
+.repository.file.list #file-content .code-view table {
+  border: 0 !important;
+}
+
+.repository.file.list #file-content .code-view .lines-num {
+  background-color: var(--secondBgColor) !important;
+  line-height: 20px !important;
+  font-size: 12px;
+}
+
+.repository.file.list #file-content .code-view .lines-num pre li,
+.repository.file.list #file-content .code-view .lines-code pre li,
+.repository.file.list #file-content .code-view .lines-num ol li,
+.repository.file.list #file-content .code-view .lines-code ol li,
+.repository.file.list #file-content .code-view .lines-num .hljs li,
+.repository.file.list #file-content .code-view .lines-code .hljs li {
+  font-size: 14px;
+}
+
+.repository.file.list #file-content .code-view .lines-num pre li.active,
+.repository.file.list #file-content .code-view .lines-code pre li.active,
+.repository.file.list #file-content .code-view .lines-num ol li.active,
+.repository.file.list #file-content .code-view .lines-code ol li.active,
+.repository.file.list #file-content .code-view .lines-num .hljs li.active,
+.repository.file.list #file-content .code-view .lines-code .hljs li.active,
+.hljs-meta .hljs-attribute .hljs-name .hljs-tag .hljs-string .hljs-doctag .hljs-subst .hljs-selector-tag .hljs-keyword .hljs-quote .hljs-comment {
+  background: var(--codeSelected);
+  color: var(--codeColorSelected) !important;
+}
+
+.repository .diff-file-box .file-body.file-code .lines-num {
+  background-color: var(--secondBgColor) !important;
+}
+
+.repository .diff-file-box .code-diff tbody tr.del-code td {
+  background-color: var(--codeDifOld) !important;
+  border-color: #000 !important;
+  color: #fff !important;
+}
+
+.repository .diff-file-box .code-diff tbody tr.add-code td {
+  background-color: #467b60 !important;
+  border-color: #c1e9c1 !important;
+  color: #fff !important;
+}
+
+.repository .diff-file-box .code-diff tbody tr.del-code td.add-code pre {
+  background-color: #4c296a !important;
+  color: #fff !important;
+}
+
+.repository .diff-file-box .code-diff tbody tr.del-code td.add-code {
+  background-color: #4c296a !important;
+  color: #fff !important;
+}
+
+.repository.file.editor .commit-form-wrapper .commit-form {
+  border: 1px solid var(--mainBgColor);
+}
+
+.commit-form > .field textarea {
+  background-color: var(--mainBgColor) !important;
+  color: var(--mainTextColor);
+  caret-color: var(--secondTextColor);
+}
+
+.commit-form > .field textarea:focus {
+  color: var(--mainTextColor);
+  border-color: rgba(var(--secondTextColor), 0.25);
+}
+
+.repository .diff-detail-box ol li {
+  border-bottom: 1px dashed var(--mainBgColor);
+}
+
+.repository .diff-file-box .file-body.file-code .lines-num-old {
+  border-right: 1px solid var(--mainBgColor);
+}
+
+.repository .head .mega-octicon {
+  color: var(--accentBase);
+}
+
+.mega-octicon.octicon-repo {
+  color: var(--accentBase) !important;
+}
+
+#repo-clone-url {
+  color: var(--accentBase) !important;
+}
+
+#repo-clone-url::-moz-selection {
+  color: var(--accentBase) !important;
+  background-color: var(--secondBgColor);
+}
+
+#repo-clone-url::selection {
+  color: var(--accentBase) !important;
+  background-color: var(--secondBgColor);
+}
+
+.repository.release #release-list {
+  border-top: 1px solid var(--mainBgColor);
+}
+
+.repository.release #release-list > li .detail {
+  border-left: 1px solid var(--mainBgColor);
+}
+
+.repository.forks .list .item {
+  border-bottom: 1px solid var(--mainBgColor);
+}
+
+.repository.settings.collaboration .collaborator.list > .item:not(:last-child) {
+  border-bottom: 1px solid var(--mainBgColor);
+}
+
+#search-user-box .results .item {
+  border-bottom: 1px solid var(--mainBgColor);
+}
+
+.ui.vertical.menu .header.item {
+  background: var(--secondBgColor);
+  color: var(--mainTextColor);
+  text-align: center;
+  padding-left: 0;
+}
+
+.organization {
+  padding-top: 80px;
+}
+
+.organization.profile #org-avatar {
+  width: 90px;
+  height: 70px;
+  margin-right: 5px;
+}
+
+.organization.teams .repositories .item:not(:last-child),
+.organization.teams .members .item:not(:last-child) {
+  border-bottom: 1px solid var(--mainBgColor);
+}
+
+.user:not(.icon) {
+  padding-top: 80px;
+}
+
+.ui.card {
+  background-color: transparent !important;
+  color: var(--mainTextColor) !important;
+  border: 0 !important;
+}
+
+.user.profile .ui.card .extra.content ul li:not(:last-child) {
+  border-bottom: 1px solid var(--mainBgColor);
+}
+
+.dashboard {
+  padding-top: 80px;
+}
+
+.feeds .list ul li:not(:last-child) {
+  border-bottom: none;
+}
+
+.feeds .list ul li a .octicon {
+  color: var(--accentBase);
+}
+
+.explore {
+  padding-top: 80px;
+}
+
+.ui.repository.list .item .ui.header {
+  color: var(--mainTextColor);
+}
+
+.ui.repository.list .item .ui.header .name {
+  color: var(--mainTextColor);
+}
+
+.ui.repository.list .item .ui.header .name:hover {
+  color: var(--accentBase);
+}
+
+.ui.repository.list .item:not(:first-child) {
+  border-top: none;
+}
+
+.ui.header .sub.header {
+  color: var(--accentBase) !important;
+}
+
+.ui.header {
+  color: var(--accentBase) !important;
+}
+
+.ui.form .inline.field > label,
+.ui.form .inline.field > p,
+.ui.form .inline.fields .field > label,
+.ui.form .inline.fields .field > p,
+.ui.form .inline.fields > label {
+  color: var(--mainTextColor);
+}
+
+.secondary {
+  background-color: transparent !important;
+  color: var(--accentBase) !important;
+}
+
+.secondary .item {
+  color: var(--mainTextColor) !important;
+}
+
+.secondary .item:hover {
+  color: var(--mainTextColor);
+}
+
+.repository.file.list #file-content .code-view .lines-num pre,
+.repository.file.list #file-content .code-view .lines-code pre,
+.repository.file.list #file-content .code-view .lines-num ol,
+.repository.file.list #file-content .code-view .lines-code ol,
+.repository.file.list #file-content .code-view .lines-num .hljs,
+.repository.file.list #file-content .code-view .lines-code .hljs {
+  background-color: var(--codeBg) !important;
+  color: var(--codeColor);
+  margin: 0;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.feeds .news > .ui.grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ActionButtons {
+  color: var(--mainTextColor) !important;
+  background-color: inherit !important;
+  border: 0.5px solid var(--mainBgColor);
+}
+
+.CodeMirror-code {
+  background-color: var(--codeBg) !important;
+  color: var(--codeColor) !important;
+}
+
+.CodeMirror-gutters {
+  background-color: var(--codeBg);
+  color: var(--accentBase);
+}
+
+.CodeMirror {
+  /* file edditor */
+  background: var(--codeBg);
+  color: var(--codeColor) !important;
+}
+
+#repo-desc {
+  text-align: center;
+  font-weight: 500;
+  color: var(--mainTextColor);
+  background: var(--secondBgColor);
+  padding: 1rem 0px;
+  margin: 0px;
+}
+
+#repo-clone-ssh {
+  color: var(--mainTextColor);
+}
+
+#repo-clone-https {
+  color: var(--mainTextColor);
+}
+
+#danger_zone_edited {
+  background: var(--secondBgColor);
+  border-color: var(--mainBgColor) !important;
+}
+
+#basic_sett,
+#adv_sett,
+#adv_sett_form,
+#admin_sec_panel,
+#admin_small_panel {
+  background: var(--secondBgColor);
+  border-color: var(--mainBgColor) !important;
+}
+
+#danger_zone_edited_header {
+  background: var(--accentBase) !important;
+}
+
+#commits-table-head tr th {
+  color: var(--mainTextColor) !important;
+}
+
+.ui.table thead th {
+  background: var(--secondBgColor);
+  color: var(--mainTextColor);
+}
+
+.ui.table thead tr:hover th {
+  background: var(--mainBgColor);
+}
+
+.ui.table tr td {
+  border-top: none;
+}
+
+.repository.file.list #repo-files-table tr:hover {
+  background-color: var(--mainBgColor);
+}
+
+tr:hover a {
+  color: var(--accentBase);
+}
+
+#repo-files-table tr:hover {
+  color: var(--accentBase);
+}
+
+#repo-files-table tr:hover span {
+  /* repo time last changed */
+  color: var(--accentBase) !important;
+}
+
+.feeds .list ul li.private {
+  background-color: var(--secondBgColor);
+}
+
+.feeds .list ul {
+  background-color: var(--mainBgColor);
+  background-size: contain;
+  background-attachment: fixed;
+  background-blend-mode: difference;
+}
+
+.repository .diff-file-box .code-diff tbody tr.tag-code td {
+  background-color: var(--secondBgColor) !important;
+}
+
+.repository .diff-file-box .header {
+  background-color: var(--accentBase);
+}
+
+/* File Editor */
+.editor-toolbar a {
+  color: var(--accentBase) !important;
+}
+
+.editor-toolbar a.active,
+.editor-toolbar a:hover {
+  background: var(--btnShadow);
+  color: var(--mainTextColor);
+  border-color: var(--btnShadow);
+}
+
+.CodeMirror {
+  border: 1px solid var(--mainBgColor);
+}
+
+.CodeMirror-gutters {
+  background-color: var(--secondBgColor);
+  border-right: none;
+  border-left: none;
+}
+
+/*#########################           Syntax Higlight Theme #####################*/
+.hljs-comment,
+.hljs-quote {
+  color: var(--comment) !important;
+  font-weight: 400;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: var(--selector) !important;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: var(--doctag) !important;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: var(--attribute) !important;
+}
+
+.hljs-meta {
+  color: var(--meta) !important;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: var(--selector) !important;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: var(--hljsTitle) !important;
+}
+
+/* Editor Highlight Theme */
+.cm-s-default .cm-comment {
+  color: var(--comment) !important;
+  font-weight: 400;
+}
+
+.cm-s-default .cm-def {
+  color: var(--codeColor);
+}
+
+.cm-s-default .cm-builtin {
+  color: var(--selector) !important;
+}
+
+/* semantic */
+.ui.attached.segment {
+  border: 0;
+}
+
+.ui.segment {
+  background: var(--secondBgColor);
+}
+
+.ui.buttons > .ui.dropdown:last-child .menu,
+.ui.menu .right.dropdown.item .menu,
+.ui.menu .right.menu .dropdown:last-child .menu {
+  background-color: var(--secondBgColor) !important;
+}
+
+.ui.menu .ui.dropdown .menu > .item {
+  color: var(--accentBase) !important;
+  background-color: var(--secondBgColor) !important;
+}
+
+.ui.dropdown .menu > .item:hover {
+  color: var(--accentBase);
+}
+
+.ui.menu {
+  background: var(--secondBgColor);
+}
+
+.ui.menu .ui.dropdown .menu > .selected.item {
+  color: var(--accentBase) !important;
+}
+
+.ui.menu .ui.dropdown .menu > .active.item {
+  color: var(--accentBase) !important;
+}
+
+.ui.selection.dropdown .menu > .item {
+  border-top: none;
+}
+
+.ui.checkbox input:focus ~ label {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox.checked label:focus {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox label {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox.checked label {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox label.focus {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox.checked label.focus {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox label:hover {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox.checked label:hover {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox label,
+.ui.checkbox + label {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox label:hover,
+.ui.checkbox + label:hover {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox.checked label,
+.ui.checkbox.checked + label {
+  color: var(--mainTextColor);
+}
+
+.ui.checkbox.checked label:hover,
+.ui.checkbox.cheked + label:hover {
+  color: var(--mainTextColor);
+}
+
+.ui.link.menu .item,
+.ui.menu .dropdown.item,
+.ui.menu .link.item,
+.ui.menu a.item {
+  color: var(--mainTextColor);
+}
+
+.ui.link.menu .item:hover,
+.ui.menu .dropdown.item:hover,
+.ui.menu .link.item:hover,
+.ui.menu a.item:hover {
+  color: var(--accentBase);
+}
+
+.ui .dropdown .menu {
+  background-color: var(--secondBgColor);
+}
+
+.ui .dropdown .menu a:hover {
+  color: var(--accentBase) !important;
+}
+
+.ui.basic.button,
+.ui.basic.buttons .button {
+  background: var(--accentBase) !important;
+  color: var(--mainTextColor);
+}
+
+.ui.vertical.menu {
+  background: var(--secondBgColor);
+  color: var(--accentBase);
+}
+
+.ui.dropdown .menu .selected.item,
+.ui.dropdown.selected {
+  background: var(--secondBgColor);
+  color: var(--mainTextColor);
+}
+
+.ui.vertical.menu .item {
+  color: var(--mainTextColor);
+}
+
+.ui.menu .item {
+  font-weight: 600;
+  color: var(--mainTextColor);
+}
+
+.ui.menu .item .active {
+  font-weight: 600;
+}
+
+.ui.menu .item > .input input {
+  background-color: var(--mainBgColor);
+}
+
+.ui.menu .item:hover,
+.ui.vertical.menu .item:hover {
+  color: var(--mainTextColor);
+}
+
+.ui.vertical.menu .active.item {
+  background: var(--accentBase);
+}
+
+.ui.menu .active.item {
+  font-weight: 600;
+}
+
+.ui.menu .active.item:hover,
+.ui.vertical.menu .active.item:hover {
+  color: var(--accentBase);
+}
+
+.ui.pagination.menu .active.item {
+  color: var(--accentBase);
+}
+
+.ui.dropdown .menu > .item {
+  color: var(--mainTextColor);
+}
+
+.ui.menu.three.item .item {
+  background-color: var(--secondBgColor);
+  color: var(--accentBase);
+}
+
+.ui.card > .extra a:not(.ui),
+.ui.cards > .card > .extra a:not(.ui) {
+  color: var(--mainTextColor);
+}
+
+.ui.table {
+  background-color: var(--RepoFilesBg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-blend-mode: color-burn;
+  color: var(--mainTextColor);
+}
+
+.ui.button {
+  background: var(--accentBase) !important;
+  color: var(--mainTextColor) !important;
+}
+
+.ui.button:hover {
+  color: var(--mainTextColor);
+}
+
+.ui.dropdown .menu > .header {
+  color: var(--mainTextColor);
+}
+
+.ui.menu .ui.dropdown .menu > .item:hover {
+  color: var(--accentBase) !important;
+  background-color: var(--secondBgColor) !important;
+}
+
+.ui.dropdown .menu {
+  border: 1px solid var(--secondBgColor);
+}
+
+.ui.dropdown .menu > .input:not(.transparent) input {
+  background-color: var(--mainBgColor);
+  color: var(--secondTextColor);
+}
+
+.ui.form input:not([type]),
+.ui.form input[type=date],
+.ui.form input[type=datetime-local],
+.ui.form input[type=email],
+.ui.form input[type=file],
+.ui.form input[type=number],
+.ui.form input[type=password],
+.ui.form input[type=search],
+.ui.form input[type=tel],
+.ui.form input[type=text],
+.ui.form input[type=time],
+.ui.form input[type=url] {
+  background: var(--mainBgColor);
+  color: var(--mainTextColor);
+  font-weight: 600;
+}
+
+.ui.form input:not([type]):focus,
+.ui.form input[type=date]:focus,
+.ui.form input[type=datetime-local]:focus,
+.ui.form input[type=email]:focus,
+.ui.form input[type=file]:focus,
+.ui.form input[type=number]:focus,
+.ui.form input[type=password]:focus,
+.ui.form input[type=search]:focus,
+.ui.form input[type=tel]:focus,
+.ui.form input[type=text]:focus,
+.ui.form input[type=time]:focus,
+.ui.form input[type=url]:focus {
+  color: var(--accentBase);
+  border-color: rgba(var(--secondTextColor), 0.25);
+  background: var(--mainBgColor);
+  -webkit-box-shadow: 0 0 0px 1px var(--btnShadow);
+  box-shadow: 0 0 0px 1px var(--btnShadow);
+}
+
+.ui.action.input:not([class*="left action"]) > input:focus {
+  border-right-color: transparent !important;
+}
+
+.ui.form .field > label {
+  color: var(--mainTextColor);
+}
+
+.ui.attached.header {
+  background: var(--mainBgColor);
+}
+
+.ui .text.black:hover {
+  color: var(--accentBase);
+}
+
+.ui.breadcrumb a:hover {
+  color: var(--accentBase);
+}
+
+.ui.menu .item.disabled, .ui.menu .item.disabled:hover {
+  color: rgba(160, 154, 154, 0.3) !important;
+}
+
+.ui.tabular.menu .active.item {
+  background: none var(--secondBgColor);
+  border-color: var(--secondBgColor);
+  color: var(--accentBase);
+}
+
+.ui.basic.button,
+.ui.basic.buttons .button {
+  background: var(--secondBgColor) none !important;
+  color: var(--mainTextColor) !important;
+  font-weight: 600;
+  -webkit-box-shadow: 0 0 0px 1px var(--btnShadow);
+  box-shadow: 0 0 0px 1px var(--btnShadow);
+}
+
+.ui.basic.button:hover,
+.ui.basic.buttons .button:hover {
+  background: var(--secondBgColor) !important;
+  color: var(--accentBase) !important;
+  -webkit-box-shadow: 0 0 0px 1px var(--btnShadow);
+  box-shadow: 0 0 0px 1px var(--btnShadow);
+}
+
+.ui.label {
+  background-color: var(--accentBase-dark);
+  color: #fff;
+}
+
+.ui.basic.label {
+  background: none var(--accentBase);
+}
+
+.ui.breadcrumb a {
+  color: var(--mainTextColor);
+}
+
+.ui.list .list > .item .description,
+.ui.list > .item .description {
+  color: var(--mainTextColor);
+}
+
+.ui.user.list .item .description a {
+  color: var(--mainTextColor);
+}
+
+.ui.user.list .item .description a:hover {
+  text-decoration: underline;
+  color: var(--accentBase);
+}
+
+.ui.buttons:not(.basic):not(.inverted) > .button,
+.ui.buttons > .ui.button:not(.basic):not(.inverted) {
+  -webkit-box-shadow: 0 0 0px 1px var(--btnShadow);
+  box-shadow: 0 0 0px 1px var(--btnShadow);
+}
+
+.ui.button {
+  background: transparent;
+}
+
+.ui.button:hover {
+  background-color: var(--secondBgColor);
+  color: var(--mainTextColor) !important;
+}
+
+.ui.card,
+.ui.cards > .card {
+  box-shadow: 0px -1px 22px 10px var(--userCardShadow);
+}
+
+a {
+  color: var(--mainTextColor);
+}
+
+a:hover {
+  color: var(--accentBase);
+}
+
+footer {
+  border-top: 1px solid var(--accentBase);
+  height: 50px;
+}
+
+.CodeMirror-cursor {
+  border-color: var(--secondTextColor);
+}
+
+.ui.breadcrumb .divider {
+  color: var(--accentBase);
+}
+
+.octicon.octicon-file-directory {
+  color: var(--mainTextColor) !important;
+}
+
+.ui .sha.label {
+  color: var(--mainTextColor) !important;
+  background: var(--mainBgColor) !important;
+  border: 1px solid var(--accentBase) !important;
+}
+
+a.ui.label:hover, a.ui.labels .label:hover {
+  background-color: var(--mainBgColor) !important;
+  border-color: var(--accentBase) !important;
+  color: var(--accentBase) !important;
+}
+
+.ui.blue.labels .label:hover, a.ui.blue.label:hover {
+  background-color: var(--mainBgColor) !important;
+  border-color: var(--accentBase) !important;
+  color: var(--accentBase) !important;
+}
+
+.ui.compact.menu .active.item {
+  color: var(--accentBase);
+}
+
+.repository.branches:not(.settings) .ui.list > .item:not(:last-child) {
+  border-bottom: 1px solid var(--accentBase);
+}
+
+.ui.selectable.table tbody tr:hover, .ui.table tbody tr td.selectable:hover {
+  background: rgba(0,0,0,.05) !important;
+  color: var(--accentBase) !important;
+}
+
+.ui.basic.blue.button, .ui.basic.blue.buttons .button {
+  -webkit-box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  color: var(--accentBase) !important;
+}
+
+.ui.basic.blue.button:hover, .ui.basic.blue.buttons .button:hover {
+  -webkit-box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  color: var(--accentBase) !important;
+  background: var(--mainBgColor) !important;
+}
+
+.ui.basic.blue.button:active, .ui.basic.blue.buttons .button:active {
+  -webkit-box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  color: var(--accentBase) !important;
+  background: var(--mainBgColor) !important;
+}
+
+.ui.basic.blue.button:focus, .ui.basic.blue.buttons .button:focus {
+  -webkit-box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  box-shadow: 0 0 0 1px var(--accentBase) inset !important;
+  color: var(--accentBase) !important;
+  background: var(--mainBgColor) !important;
+}
+
+.ui.form textarea {
+  color: var(--mainTextColor);
+  background: var(--mainBgColor);
+}
+
+.ui.form textarea:focus {
+  color: inherit;
+  background: inherit;
+}
+
+.ui.selection.dropdown {
+  color: var(--mainTextColor);
+  background: var(--mainBgColor);
+}
+
+.ui.accordion .title:not(.ui) {
+  color: inherit;
+}
+
+.admin {
+  padding-top: 80px !important;
+}
+
+.home .hero .octicon {
+  color: var(--accentBase);
+  font-size: 40px;
+  width: 50px;
+}
+
+.home a {
+  color: var(--accentBase);
+}
+
+.admin.config pre {
+  background-color: var(--secondBgColor);
+}
+
+.ui.menu .ui.dropdown .menu > .item {
+  color: var(--mainTextColor) !important;
+  background-color: var(--secondBgColor) !important;
+}
+
+a.ui.basic.label:hover {
+  background: var(--RepoFilesBg);
+  color: var(--mainTextColor);
+}
+
+.ui.basic.button:active, .ui.basic.buttons .button:active {
+  background: var(--secondBgColor) !important;
+  color: var(--accentBase) !important;
+}
+
+.ui.basic.button:focus, .ui.basic.buttons .button:focus {
+  background: var(--secondBgColor) !important;
+  color: var(--accentBase) !important;
+}
+
+input[name=q] {
+  background: var(--secondBgColor) !important;
+}
+
+.ui.button {
+  margin: 0px !important;
+  padding: 0.8rem 1rem !important;
+}
+
+.hljs {
+  color: var(--mainTextColor) !important;
+}

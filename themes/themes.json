@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Base16",
+    "dir": "base16",
+    "css": [
+      "/themes/base16/css/custom_theme.css"
+    ],
+    "js": []
+  },
+  {
+    "name": "Kristuff",
+    "dir": "kristuff",
+    "css": [
+      "/themes/kristuff/css/custom_theme.css"
+    ],
+    "js": []
+  },
+  {
+    "name": "Vladimirok",
+    "dir": "vladimirok",
+    "css": [
+      "/themes/vladimirok/css/custom_theme.css"
+    ],
+    "js": []
+  },
+  {
+    "name": "Default",
+    "dir": "default",
+    "css": [
+      "/themes/default/css/custom_theme.css"
+    ],
+    "js": []
+  },
+  {
+    "name": "OG",
+    "dir": "og",
+    "css": [
+      "/themes/og/css/custom_theme.css"
+    ],
+    "js": [
+      "/themes/og/js/logo.js"
+    ]
+  }
+]

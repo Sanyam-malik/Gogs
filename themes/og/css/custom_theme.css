@@ -1,0 +1,958 @@
+:root {
+	--bg-main: #292929;
+	--bg-secondary: #1c1c1c;
+	--text-primary: white;
+	--text-muted: grey;
+	--accent: #1a8242;
+	--border-main: #292929;
+	--danger-bg: #3f0904;
+	--warning-bg: #5f4929;
+	--success-bg: #587513;
+	--info-bg: #276f86;
+	--danger-text: color-mix(in srgb, var(--danger-bg) 70%, white) !important;
+	--warning-text: color-mix(in srgb, var(--warning-bg) 70%, white) !important;
+	--success-text: color-mix(in srgb, var(--success-bg) 70%, white) !important;
+	--info-text: color-mix(in srgb, var(--info-bg) 70%, white) !important;
+}
+
+body:not(.full-width) {
+	background-color: var(--bg-main);
+}
+
+.following.bar.light {
+	background-color: var(--bg-secondary);
+	border-bottom: 1px solid var(--accent);
+}
+
+.following.bar .top.menu a.item:hover {
+	color: var(--accent);
+}
+
+footer {
+	border-top: 1px solid var(--accent);
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
+}
+
+b, strong {
+	font-weight: bolder;
+}
+
+i.icon, i.icons {
+	color: var(--accent);
+}
+
+a {
+	color: var(--accent);
+}
+
+a:hover {
+	color: var(--accent);
+}
+
+.ui.segment {
+	background: var(--main-bg);
+}
+
+.ui.menu {
+	background: var(--bg-secondary);
+}
+
+#org-info .ui.header {
+	color: var(--text-primary);
+}
+
+#repo-clone-url {
+	background: var(--bg-main);
+}
+
+.repository #clone-panel {
+	margin-top: -8px;
+	margin-left: 0px;
+	width: auto;
+	padding: 0.5rem;
+}
+
+#clone-panel .icon.button:hover, #clone-panel .icon.button:focus, #clipboard-btn, #clipboard-btn:hover, #clipboard-btn:focus {
+	background: inherit !important;
+}
+
+.user.profile .ui.repository.list {
+	margin-top: 0px;
+}
+
+.user.profile .ui.container, .ui.grid .ui.eleven.wide.column .ui.secondary.pointing.menu {
+	border-bottom: 2px solid var(--bg-main);
+}
+
+.user.profile .octicon {
+	margin-right: 5px;
+}
+
+br {
+	display: none;
+}
+
+.dashboard.feeds .ten.wide.column {
+	background: var(--bg-secondary);
+	border-radius: 5px;
+}
+
+.dashboard.feeds .ten.wide.column .ajax-load-button:hover {
+	background: var(--accent) !important;
+	border: none !important;
+	color: var(--text-primary) !important;
+}
+
+.user.profile .feeds {
+	padding: 1rem;
+	background: var(--bg-secondary);
+}
+
+.repository.quickstart .guide .ui.action.small.input {
+	width: 100%;
+	background: var(--bg-main);
+	padding: 0.4rem;
+	border-radius: 5px;
+}
+
+.user.profile .ui.card .extra.content ul li:not(:last-child) {
+	border-bottom: none;
+}
+
+.ui.card, .ui.cards > .card {
+	-webkit-box-shadow: none;
+}
+
+.ui.secondary.menu .item {
+	color: var(--text-primary);
+}
+
+.ui.secondary.menu .active.item {
+	color: var(--accent);
+}
+
+.ui.secondary.menu .dropdown.item:hover, .ui.secondary.menu .link.item:hover, .ui.secondary.menu a.item:hover {
+	color: var(--accent);
+}
+
+.ui.link.menu .item:active, .ui.menu .link.item:active, .ui.menu a.item:active {
+	color: var(--accent);
+}
+
+.ui.vertical.menu {
+	background: var(--bg-secondary);
+}
+
+.ui.vertical.menu .header.item {
+	background: transparent;
+	color: var(--text-primary);
+	text-align: center;
+}
+
+.ui.menu .item {
+	color: var(--text-primary);
+}
+
+.ui.link.menu .item:hover, .ui.menu .dropdown.item:hover, .ui.menu .link.item:hover, .ui.menu a.item:hover {
+	color: var(--accent);
+}
+
+.ui.menu .active.item:hover, .ui.vertical.menu .active.item:hover {
+	color: var(--accent);
+}
+
+.mega-octicon, .octicon {
+	color: var(--accent);
+}
+
+.ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="file"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="text"], .ui.form input[type="time"], .ui.form input[type="url"] {
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+}
+
+.ui.input > input::placeholder {
+	color: var(--text-primary);
+}
+
+.ui.action.input > .button, .ui.action.input > .buttons {
+	color: var(--text-primary);
+	background-color: var(--accent);
+}
+
+.ui.repository.list .item .ui.header .name {
+	color: var(--text-primary);
+}
+
+.ui.input.focus > input::placeholder, .ui.input > input:focus::placeholder {
+	color: var(--text-primary);
+}
+
+.ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="url"]:focus {
+	color: var(--text-primary);
+	border-color: var(--accent);
+	background: var(--bg-secondary);
+}
+
+.ui.menu .active.item {
+	color: var(--accent);
+}
+
+.ui.attached.segment {
+	border: 1px solid var(--border-main);
+	background: var(--bg-secondary);
+}
+
+.user.activate form .header, .user.forgot.password form .header, .user.reset.password form .header, .user.signin form .header, .user.signup form .header, .repository.new.fork form .header, .repository.new.migrate form .header, .repository.new.repo form .header, .organization.new.org form .header {
+	padding-left: 0px !important;
+	text-align: center !important;
+	color: var(--accent);
+	background: var(--bg-secondary);
+	border-color: var(--border-main);
+}
+
+.ui.attached.segment .field input {
+	background: var(--bg-main);
+}
+
+.ui.attached.segment .field label {
+	color: var(--text-primary);
+}
+
+.ui.attached.segment {
+	color: var(--text-primary);
+}
+
+.ui.action.input:not([class*="left action"]) > input:focus {
+	border-right-color: transparent !important;
+}
+
+.ui.list {
+	background: var(--bg-secondary);
+	padding: 1rem !important;
+	border-radius: 5px;
+}
+
+.ui.user.list:not(:has(.item))::before, .ui.repository.list:not(:has(.item))::before {
+	content: "No records found";
+	font-style: italic;
+	display: block;
+	text-align: center;
+	color: var(--text-primary);
+}
+
+.ui.middle.aligned.divided.list:not(:has(.item))::before {
+	content: "No records found";
+	font-style: italic;
+	display: block;
+	text-align: center;
+	color: var(--text-primary);
+}
+
+.ui.list .list > .item .description, .ui.list > .item .description {
+	color: var(--text-primary);
+}
+
+.ui.user.list .item .description a {
+	color: var(--text-primary);
+}
+
+.dashboard, .explore, .user, .repository {
+	padding: 2rem 0rem !important;
+	padding-bottom: 4rem !important;
+}
+
+.admin {
+	padding: 2rem 0rem !important;
+	padding-bottom: 4rem !important;
+}
+
+.ui.floating.dropdown {
+	margin-bottom: 1rem;
+	border-radius: 5px;
+	color: var(--text-primary);
+}
+
+.ui.language.dropdown, .ui.theme.dropdown {
+	padding: 0px;
+	margin: 0px;
+	padding-left: 8px;
+	margin-left: 5px;
+	border-radius: 0px;
+}
+
+.ui.menu .dropdown.item .menu {
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+	width: 12vw;
+}
+
+.ui.menu .ui.dropdown .menu > .item {
+	color: var(--text-primary) !important;
+}
+
+.ui.dropdown .menu > .header {
+	display: none;
+	color: var(--text-primary);
+}
+
+.ui.dropdown .menu > .divider {
+	display: none;
+}
+
+.ui.menu .ui.dropdown .menu > .item:hover {
+	color: var(--accent) !important;
+}
+
+.ui.top.attached.header {
+	background: var(--bg-secondary) !important;
+	border: none;
+	border: 1px solid var(--border-main);
+	background: var(--bg-secondary) !important;
+	color: var(--accent) !important;
+	padding: 1rem !important;
+}
+
+.ui.menu .ui.dropdown .menu > .active.item {
+	color: var(--accent) !important;
+}
+
+.ui.red.message, .ui.negative.message {
+	background-color: var(--danger-bg);
+	box-shadow: 0 0 0 1px var(--danger-bg) inset, 0 0 0 0 transparent;
+}
+
+.user.settings .email.list .item:not(:first-child) {
+	border-top: none;
+}
+
+.user.settings .list .item.ui.grid {
+	margin-top: 0.5rem;
+}
+
+p {
+	color: var(--text-primary);
+}
+
+.form .help {
+	color: var(--text-primary) !important;
+}
+
+.ui.card, .ui.cards > .card {
+	background: var(--bg-secondary);
+	border: none;
+}
+
+.ui.selection.dropdown {
+	background: var(--bg-main);
+	color: var(--text-primary);
+}
+
+.ui.default.dropdown:not(.button) > .text, .ui.dropdown:not(.button) > .default.text {
+	color: var(--text-primary);
+}
+
+.ui.selection.dropdown:focus, .ui.selection.active.dropdown:hover {
+	border-color: var(--accent);
+}
+
+.ui.selection.visible.dropdown > .text:not(.default) {
+	color: var(--text-primary);
+}
+
+.ui.dropdown .menu {
+	background: var(--bg-main);
+}
+
+.ui.selection.dropdown .menu > .item {
+	border-top: none;
+	color: var(--text-primary);
+}
+
+.ui.accordion .title:not(.ui) {
+	color: var(--text-primary);
+}
+
+.ui.selection.active.dropdown .menu {
+	border-color: var(--accent);
+}
+
+.ui.selection.active.dropdown:hover .menu {
+	border-color: var(--accent);
+}
+
+.ui.secondary.pointing.menu .active.item, .ui.secondary.pointing.menu .active.item:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+.ui.secondary.pointing.menu .dropdown.item:hover, .ui.secondary.pointing.menu .link.item:hover, .ui.secondary.pointing.menu a.item:hover {
+	color: var(--accent);
+}
+
+.ui.user.list:has(.item:only-child) .item {
+	padding-bottom: 0;
+}
+
+.ui.container:not(.fluid) {
+	width: 75% !important;
+}
+
+.ui.form textarea {
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+}
+
+input::selection, textarea::selection, .ui.form textarea:focus {
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+	border: 1px solid var(--accent);
+}
+
+.ui.attached.segment .field textarea {
+	background: var(--bg-main);
+}
+
+.ui.checkbox input:checked:focus ~ .box::after, .ui.checkbox input:checked:focus ~ label::after, .ui.checkbox input:not([type="radio"]):indeterminate:focus ~ .box::after, .ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label::after, .ui.checkbox input:checked ~ .box::after, .ui.checkbox input:checked ~ label::after {
+	color: var(--accent);
+	background: var(--bg-main);
+}
+
+.ui.checkbox input:checked ~ .box::before, .ui.checkbox input:checked ~ label::before {
+	background: var(--bg-main);
+}
+
+.ui.checkbox .box::before, .ui.checkbox label::before, .ui.checkbox .box:hover::before, .ui.checkbox label:hover::before, .ui.checkbox input:focus ~ .box::before, .ui.checkbox input:focus ~ label::before {
+	background: var(--bg-main);
+	border: none;
+}
+
+.ui.vertical.menu {
+	width: 100%;
+}
+
+.ui.positive.message {
+	background-color: var(--success-bg);
+	box-shadow: 0 0 0 1px var(--success-bg) inset, 0 0 0 0 transparent;
+}
+
+.ui.info.message {
+	background-color: var(--info-bg);
+	box-shadow: 0 0 0 1px var(--info-bg) inset, 0 0 0 0 transparent;
+}
+
+.settings .key.list .item:not(:first-child) {
+	border-top: none;
+}
+
+.ui.radio.checkbox input:checked ~ .box::after, .ui.radio.checkbox input:checked ~ label::after, .ui.radio.checkbox input:checked ~ .box::before, .ui.radio.checkbox input:checked ~ label::before {
+	background-color: var(--accent);
+}
+
+.ui.radio.checkbox input:focus ~ .box::before, .ui.radio.checkbox input:focus ~ label::before {
+	border-color: var(--accent);
+}
+
+.ui.radio.checkbox input:checked:focus ~ .box::after, .ui.radio.checkbox input:checked:focus ~ label::after, .ui.radio.checkbox input:focus:checked ~ .box::before, .ui.radio.checkbox input:focus:checked ~ label::before {
+	background-color: var(--accent);
+}
+
+.ui.selection.active.dropdown {
+	border-color: var(--accent);
+}
+
+.ui.form ::placeholder, .ui.form :focus::placeholder {
+	color: var(--text-primary) !important;
+}
+
+.ui .text.red {
+	color: var(--danger-text) !important;
+}
+
+.ui .text.blue {
+	color: var(--info-text) !important;
+}
+
+.context.user.overflow.menu {
+	background: var(--bg-secondary);
+	padding: 0.5rem !important;
+}
+
+.context.user.overflow.menu .items .item:hover {
+	color: var(--accent) !important;
+}
+
+.overflow.menu .items .item, .ui.dropdown .menu > .item {
+	color: var(--text-primary) !important;
+}
+
+.overflow.menu .items .item:hover, .ui.dropdown .menu > .item:hover {
+	color: var(--accent) !important;
+}
+
+.ui.table {
+	color: var(--text-primary);
+	background: var(--bg-secondary);
+	margin: 0px;
+}
+
+.ui.table thead th {
+	color: var(--text-primary);
+	background: transparent;
+}
+
+.ui.breadcrumb {
+	display: none;
+}
+
+.admin input[name="q"] {
+	border: 1px solid var(--bg-main) !important;
+}
+
+.admin code {
+	color: var(--info-text);
+}
+
+.admin.config pre {
+	background-color: var(--bg-main);
+}
+
+.ui.card > .content, .ui.cards > .card > .content {
+	color: var(--text-primary);
+}
+
+.user.profile .ui.card .extra.content ul {
+	color: var(--text-primary);
+}
+
+.user.profile .ui.card .extra.content ul li a {
+	color: var(--text-primary);
+}
+
+.user.profile .ui.card .extra.content ul li a:hover {
+	color: var(--accent) !important;
+}
+
+.ui.table tbody:not(:has(tr)) {
+	position: relative;
+	height: 4rem;
+}
+
+.ui.table tbody:not(:has(tr))::before {
+	content: "No records found";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	font-style: italic;
+	color: var(--text-primary);
+	padding: 1rem;
+}
+
+.ui.floating.dropdown i.dropdown.icon {
+	margin: 0rem;
+}
+
+.ui.divider:not(.vertical):not(.horizontal) {
+	border-top: none;
+	border-bottom: none;
+}
+
+.ui.tab.active {
+	padding: 0px !important;
+	background: none !important;
+}
+
+.feeds .list ul li {
+	padding: 0.5rem;
+}
+
+.feeds .list ul li a .octicon {
+	color: var(--accent);
+	margin-right: 5px;
+}
+
+.feeds .list .repo-owner-name-list .item-name {
+	color: var(--text-primary);
+}
+
+.ui.list .list > .item .header a, .ui.list > .item .header a {
+	color: var(--text-primary);
+}
+
+.ui.list .list > .item .header a:hover, .ui.list > .item .header a:hover {
+	color: var(--accent);
+}
+
+.ui.upward.dropdown > .menu {
+	background: var(--bg-secondary);
+}
+
+.ui.repository.list .item:not(:first-child) {
+	border-top: none;
+}
+
+.ui.repository.list .item {
+	padding-bottom: 0px;
+}
+
+.feeds .list ul li:not(:last-child) {
+	border-bottom: none;
+}
+
+.ui.user.list .item:not(:first-child) {
+	border-top: none;
+	padding-top: 0px;
+}
+
+.ui.user.list .item:last-child {
+	padding-bottom: 0px;
+}
+
+.home .hero, .home .hero h1 {
+	color: var(--text-primary);
+}
+
+.home .logo img {
+	width: 60%;
+}
+
+.following.bar .brand .ui.mini.image {
+	width: 40px;
+}
+
+.repository .header-wrapper {
+	background-color: transparent;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.repository.file.list #git-stats {
+	background: transparent;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
+}
+
+.repository.file.list #repo-desc {
+	text-align: center;
+	padding: 1rem;
+	background: var(--bg-secondary);
+	border-radius: 5px;
+	color: var(--text-primary);
+	margin: 0px;
+}
+
+.ui .text.black {
+	color: var(--text-primary);
+}
+
+.reference .ui.floating.dropdown {
+	margin-bottom: 0px;
+}
+
+.ui.secondary.menu {
+	background: var(--bg-secondary);
+	border-top-left-radius: 5px;
+	margin: 0%;
+	border-top-right-radius: 5px;
+}
+
+.ui.huge.breadcrumb {
+	display: inline-block;
+}
+
+.ui.huge.breadcrumb a {
+	color: var(--text-primary);
+}
+
+.ui.breadcrumb .divider {
+	color: var(--accent);
+}
+
+.ui.tabular.menu .active.item {
+	background: var(--bg-secondary);
+	border-color: var(--bg-main);
+	color: var(--accent) !important;
+	border-radius: 5px !important;
+}
+
+.ui.tabular.menu .item {
+	color: var(--text-primary);
+}
+
+.ui.tabular.menu .item:hover {
+	color: var(--accent);
+}
+
+.ui.header {
+	color: var(--accent);
+}
+
+#repo-files-table {
+	border-radius: 0px;
+}
+
+.ui.basic.button, .ui.basic.buttons .button, .ui.basic.blue.button, .ui.basic.blue.buttons .button {
+	background: var(--bg-secondary) !important;
+	color: var(--text-primary) !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.ui.basic.blue.button:hover, .ui.basic.blue.buttons .button:hover, .ui.basic.blue.button:focus, .ui.basic.blue.buttons .button:focus {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	color: var(--accent) !important;
+}
+
+.ui.input > input {
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+}
+
+.feeds .list #collaborative-repo-list .owner-and-repo {
+	color: var(--text-primary);
+}
+
+.repository.wiki.start .ui.container .ui.center.segment {
+	background: var(--bg-secondary);
+}
+
+.repository.wiki.start .ui.container .ui.center.segment h2 {
+	color: var(--text-primary);
+}
+
+.dashboard > :first-child {
+	margin-bottom: 1.5rem;
+}
+
+.dashboard .ui.container .ui.divider {
+	display: none;
+}
+
+.issues > :last-child .four.wide.column, .dashboard > :last-child .twelve.wide.column.content {
+	padding-top: 0px;
+}
+
+.issues > :last-child .twelve.wide.column.content {
+	background: var(--bg-secondary);
+	padding: 1.5rem;
+	border-radius: 5px;
+}
+
+.admin > :last-child .twelve.wide.column.content {
+	padding-top: 1rem;
+}
+
+#profile-avatar img {
+	border-radius: 50%;
+	padding: 1.5rem;
+}
+
+.issue.list > .item {
+	border-radius: 5px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: none;
+}
+
+.dashboard.issues .issue.list > .item {
+	background: var(--bg-main);
+}
+
+.repository .ui.container .issue.list > .item {
+	background: var(--bg-secondary);
+}
+
+.issue.list > .item:last-child {
+	margin-bottom: 0px;
+}
+
+.issue.list > .item .title {
+	color: var(--text-primary);
+}
+
+.issue.list > .item .title:hover {
+	color: var(--accent);
+}
+
+.ui.basic.label {
+	background: var(--accent);
+	color: var(--text-primary);
+}
+
+.ui .text.black:hover {
+	color: var(--accent);
+}
+
+.ui.basic.button:hover, .ui.basic.buttons .button:hover, .ui.basic.button:focus, .ui.basic.buttons .button:focus {
+	color: color-mix(in srgb, var(--text-primary) 70%, black) !important;
+	background: color-mix(in srgb, var(--bg-secondary) 70%, black) !important;
+}
+
+a.ui.basic.label:hover, a.ui.basic.label:focus {
+	color: color-mix(in srgb, var(--text-primary) 70%, black) !important;
+	background: color-mix(in srgb, var(--accent) 70%, black) !important;
+}
+
+.user-cards .list .item {
+	background: var(--bg-secondary);
+}
+
+.user-cards .list .item .meta {
+	color: var(--text-primary);
+}
+
+.user-cards .list .item button {
+	margin-top: 1rem;
+}
+
+.settings .hook.list > .item:not(:last-child) {
+	border-bottom: 0px;
+}
+
+.home .hero .octicon {
+	color: var(--accent);
+}
+
+.home .page .large a {
+	color: var(--accent);
+}
+
+.feeds .news .issue.title {
+	line-height: 1.1em;
+	width: 80%;
+	color: var(--text-primary) !important;
+}
+
+.feeds .news .time-since {
+	color: var(--text-muted) !important;
+}
+
+.ui .text.light.grey, .ui .text.grey {
+	color: var(--text-muted) !important;
+}
+
+.mega-octicon, .octicon {
+	color: var(--accent) !important;
+}
+
+.ui.label {
+	background-color: var(--bg-secondary);
+	color: var(--accent);
+}
+
+.repository.settings.settings.branches .protected-branches .item {
+	border: none;
+}
+
+.ui.modal > .header, .ui.modal > .content {
+	background: transparent;
+	color: var(--text-primary);
+}
+
+.ui.modal {
+	background: var(--bg-main);
+	color: var(--text-primary);
+}
+
+.ui.form .field > label {
+	color: var(--text-primary);
+}
+
+.ui.warning.message {
+	background-color: var(--warning-bg);
+	-webkit-box-shadow: 0 0 0 1px var(--warning-bg);
+	inset, 0 0 0 0 transparent;
+	box-shadow: 0 0 0 1px var(--warning-bg);
+	inset, 0 0 0 0 transparent;
+	color: var(--text-primary);
+}
+
+.ui.green.button, .ui.green.buttons .button {
+	background-color: var(--accent);
+	color: var(--text-primary);
+}
+
+.ui.green.button:hover, .ui.green.buttons .button:hover {
+	background-color: color-mix(in srgb, var(--accent) 70%, black) !important;
+	color: color-mix(in srgb, var(--text-primary) 70%, black) !important;
+}
+
+.ui.red.button, .ui.red.buttons .button {
+	background-color: var(--danger-bg);
+	color: var(--text-primary);
+}
+
+.ui.red.button:hover, .ui.red.buttons .button:hover {
+	background-color: color-mix(in srgb, var(--danger-bg) 70%, black) !important;
+	color: color-mix(in srgb, var(--text-primary) 70%, black) !important;
+}
+
+.ui.blue.button, .ui.blue.buttons .button {
+	background-color: var(--accent);
+	color: var(--text-primary);
+}
+
+.ui.blue.button:hover, .ui.blue.buttons .button:hover {
+	background-color: color-mix(in srgb, var(--accent) 70%, black) !important;
+	color: color-mix(in srgb, var(--text-primary) 70%, black) !important;
+}
+
+.ui.button {
+	color: var(--text-primary);
+	background: var(--accent);
+}
+
+.ui.button:hover {
+	background-color: color-mix(in srgb, var(--accent) 70%, black) !important;
+	color: color-mix(in srgb, var(--text-primary) 70%, black) !important;
+}
+
+.ui.green.label, .ui.green.labels .label {
+	background-color: var(--success-bg) !important;
+	border-color: var(--success-bg) !important;
+	color: var(--text-primary) !important;
+}
+
+.repository .label.list > .item {
+	border-bottom: 0px;
+}
+
+.ui.header .sub.header {
+	color: var(--text-muted);
+}
+
+.repository .milestone.list > .item {
+	border-bottom: none;
+	background: var(--bg-secondary);
+	padding: 1rem;
+}
+
+.repository .milestone.list > .item > a:hover, .repository .milestone.list > .item .operate > a:hover, .repository .label.list > .item a:hover {
+	color: var(--accent);
+}
+
+.repository .milestone.list > .item > a, .repository .milestone.list > .item .operate > a, .repository .label.list > .item a {
+	color: var(--text-primary);
+}
+
+.ui.progress {
+	background: var(--bg-main);
+}
+
+.repository.wiki.view .markdown {
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.ui.container {
+		width: 75% !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
